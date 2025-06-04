@@ -1,0 +1,19 @@
+#
+# This service in combination with linux ufw firewall will allow connections from a local
+# machine directly to the db instance for performing db maintenance and backups
+#
+apiVersion: v1
+kind: Service
+metadata:
+  name: kraken-db-external
+  namespace: {{.Values.namespace}}
+spec:
+  type: NodePort
+  ports:
+    - name: mysql
+      port: {{.Values.service.port}}
+      targetPort: {{.Values.service.port}}
+      nodePort: 30306  # Will be accessible on port 30306
+      protocol: TCP
+  selector:
+    app: kraken-db

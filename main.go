@@ -1,92 +1,22 @@
-package kraken_db
+package main
 
 import (
 	"encoding/json"
 	"errors"
 	"flag"
 	"fmt"
-	"log"
-	"os"
-
 	"go.uber.org/zap"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"log"
+	"os"
+	"time"
 )
-
-// Add your model structs here (assuming they're in a separate package)
-type PluginMetadata struct {
-	ID                   uint                 `json:"id" gorm:"primaryKey"`
-	Name                 string               `json:"name" gorm:"uniqueIndex"`
-	Title                string               `json:"title"`
-	Description          string               `json:"description"`
-	ImageUrl             string               `json:"imageUrl"`
-	VideoUrl             string               `json:"videoUrl"`
-	TopPick              bool                 `json:"topPick"`
-	Tier                 int                  `json:"tier"`
-	PriceDetails         PluginPriceDetails   `json:"priceDetails" gorm:"foreignKey:PluginMetadataID"`
-	ConfigurationOptions []PluginConfigOption `json:"configurationOptions" gorm:"foreignKey:PluginMetadataID"`
-}
-
-type PluginPriceDetails struct {
-	ID               uint `json:"id" gorm:"primaryKey"`
-	Month            int  `json:"month"`
-	ThreeMonth       int  `json:"threeMonth"`
-	Year             int  `json:"year"`
-	PluginMetadataID uint `json:"pluginMetadataId"`
-}
-
-type PluginConfigOption struct {
-	ID               uint     `json:"id" gorm:"primaryKey"`
-	Name             string   `json:"name"`
-	Section          string   `json:"section"`
-	Description      string   `json:"description"`
-	Type             string   `json:"type"`
-	IsBool           bool     `json:"isBool"`
-	Values           string   `json:"values"`
-	ValuesSlice      []string `json:"values" gorm:"-"`
-	PluginMetadataID uint     `json:"pluginMetadataId"`
-}
-
-type PluginPack struct {
-	ID          uint    `json:"id" gorm:"primaryKey"`
-	Name        string  `json:"name" gorm:"uniqueIndex"`
-	Title       string  `json:"title"`
-	Description string  `json:"description"`
-	ImageUrl    string  `json:"imageUrl"`
-	Discount    float32 `json:"discount"`
-	Active      bool    `json:"active"`
-}
-
-type PluginPackPriceDetails struct {
-	ID               uint `json:"id" gorm:"primaryKey"`
-	Month            int  `json:"month"`
-	ThreeMonth       int  `json:"threeMonth"`
-	Year             int  `json:"year"`
-	PluginPackID     uint `json:"pluginPackId"`
-	PluginMetadataID uint `json:"pluginMetadataId"`
-}
-
-type PluginPackItem struct {
-	ID               uint `json:"id" gorm:"primaryKey"`
-	PackID           uint `json:"packId"`
-	PluginMetadataID uint `json:"pluginMetadataId"`
-}
-
-type PluginPackInput struct {
-	Name         string                 `json:"name"`
-	Title        string                 `json:"title"`
-	Description  string                 `json:"description"`
-	ImageUrl     string                 `json:"imageUrl"`
-	Discount     float32                `json:"discount"`
-	Active       bool                   `json:"active"`
-	Plugins      []string               `json:"plugins"`
-	PriceDetails PluginPackPriceDetails `json:"priceDetails"`
-}
 
 func main() {
 	var (
 		dbHost     = flag.String("db-host", "localhost", "Database host")
-		dbPort     = flag.String("db-port", "3306", "Database port")
+		dbPort     = flag.String("db-port", "30306", "Database port") // 30306 for Kube node port
 		dbUser     = flag.String("db-user", "root", "Database user")
 		dbPassword = flag.String("db-password", "", "Database password")
 		dbName     = flag.String("db-name", "", "Database name")
@@ -100,12 +30,10 @@ func main() {
 		log.Fatal("Database name is required")
 	}
 
-	// Setup logger
 	logger, _ := zap.NewDevelopment()
 	sugar := logger.Sugar()
 	defer logger.Sync()
 
-	// Connect to database
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		*dbUser, *dbPassword, *dbHost, *dbPort, *dbName)
 
@@ -366,4 +294,137 @@ func ImportOrUpdatePluginPacks(jsonFilePath string, db *gorm.DB, log *zap.Sugare
 	}
 
 	return nil
+}
+
+type PluginPackInput struct {
+	Name         string                 `json:"name"`
+	Title        string                 `json:"title"`
+	Description  string                 `json:"description"`
+	ImageUrl     string                 `json:"imageUrl"`
+	Discount     float32                `json:"discount"`
+	Active       bool                   `json:"active"`
+	Plugins      []string               `json:"plugins"`
+	PriceDetails PluginPackPriceDetails `json:"priceDetails"`
+}
+
+// PluginPack represents a collection of plugins sold together
+type PluginPack struct {
+	ID          uint           `gorm:"primaryKey" json:"id"`
+	Name        string         `gorm:"column:name;not null" json:"name"`
+	Title       string         `json:"title"`
+	Description string         `json:"description"`
+	ImageUrl    string         `json:"imageUrl"`
+	Discount    float32        `gorm:"column:discount;default:0" json:"discount"` // Percentage discount when buying the pack
+	Active      bool           `gorm:"column:active;default:true" json:"active"`
+	CreatedAt   time.Time      `json:"createdAt"`
+	UpdatedAt   time.Time      `json:"updatedAt"`
+	DeletedAt   gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+
+	// Relations
+	Items        []PluginPackItem       `gorm:"foreignKey:PackID" json:"items"`
+	PriceDetails PluginPackPriceDetails `gorm:"foreignKey:PluginPackID" json:"priceDetails"`
+}
+
+// PluginPackItem represents a plugin that belongs to a pack
+type PluginPackItem struct {
+	ID               uint           `gorm:"primaryKey" json:"id"`
+	PackID           uint           `gorm:"column:pack_id;index" json:"packId"`
+	PluginMetadataID uint           `gorm:"column:plugin_metadata_id;index" json:"pluginMetadataId"`
+	CreatedAt        time.Time      `json:"createdAt"`
+	UpdatedAt        time.Time      `json:"updatedAt"`
+	DeletedAt        gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+
+	// Relations
+	PluginMetadata PluginMetadata `gorm:"foreignKey:PluginMetadataID" json:"pluginMetadata"`
+}
+
+type PluginMetadataPriceDetails struct {
+	ID         uint `gorm:"primaryKey" json:"id"`
+	Month      int  `json:"month"`
+	ThreeMonth int  `json:"threeMonth"`
+	Year       int  `json:"year"`
+
+	// In a JSON serialized response additional metadata about the sale price for a plugin can be included optionally in the response.
+	// If a sale is not happening for a plugin these fields can be safely ignored and will not be returned in the response.
+	SaleMonth        int            `gorm:"-" json:"saleMonth,omitempty"`
+	SaleThreeMonth   int            `gorm:"-" json:"saleThreeMonth,omitempty"`
+	SaleYear         int            `gorm:"-" json:"saleYear,omitempty"`
+	PluginMetadataID uint           `gorm:"column:plugin_metadata_id;index;not null" json:"pluginMetadataId"`
+	CreatedAt        time.Time      `json:"createdAt"`
+	UpdatedAt        time.Time      `json:"updatedAt"`
+	DeletedAt        gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+}
+
+func (p PluginMetadataPriceDetails) TableName() string {
+	return "plugin_metadata_price_details"
+}
+
+// PluginPackPriceDetails specifically for pack pricing
+type PluginPackPriceDetails struct {
+	ID           uint           `gorm:"primaryKey" json:"id"`
+	Month        int            `json:"month"`
+	ThreeMonth   int            `json:"threeMonth"`
+	Year         int            `json:"year"`
+	PluginPackID uint           `gorm:"column:plugin_pack_id;index;not null" json:"pluginPackId"`
+	CreatedAt    time.Time      `json:"createdAt"`
+	UpdatedAt    time.Time      `json:"updatedAt"`
+	DeletedAt    gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+}
+
+func (p PluginPackPriceDetails) TableName() string {
+	return "plugin_pack_price_details"
+}
+
+type CognitoCredentials struct {
+	ID              uint           `gorm:"primaryKey" json:"id"`
+	UserID          uint           `gorm:"column:user_id;index" json:"userId"`
+	RefreshToken    string         `gorm:"column:refresh_token;type:LONGTEXT" json:"refreshToken,omitempty"`
+	TokenExpiration int32          `gorm:"column:token_expiration" json:"tokenExpirationSeconds,omitempty"`
+	AccessToken     string         `gorm:"column:access_token;type:LONGTEXT" json:"accessToken,omitempty"`
+	IdToken         string         `gorm:"column:id_token;type:LONGTEXT" json:"idToken,omitempty"`
+	CreatedAt       time.Time      `json:"createdAt"`
+	UpdatedAt       time.Time      `json:"updatedAt"`
+	DeletedAt       gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+}
+
+// HardwareID represents a hardware identifier associated with a user
+type HardwareID struct {
+	ID        uint           `gorm:"primaryKey" json:"id"`
+	Value     string         `gorm:"uniqueIndex;not null"`
+	UserID    uint           `gorm:"column:user_id;index" json:"userId"`
+	CreatedAt time.Time      `json:"createdAt"`
+	UpdatedAt time.Time      `json:"updatedAt"`
+	DeletedAt gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
+}
+
+func (HardwareID) TableName() string {
+	return "hardware_ids"
+}
+
+type PluginMetadata struct {
+	ID                   uint                       `gorm:"primaryKey" json:"id"`
+	Name                 string                     `gorm:"uniqueIndex" json:"name"`
+	Title                string                     `json:"title"`
+	Description          string                     `json:"description"`
+	ImageUrl             string                     `json:"imageUrl"`
+	VideoUrl             string                     `json:"videoUrl"`
+	TopPick              bool                       `json:"topPick"`
+	IsInBeta             bool                       `json:"isInBeta"`
+	Version              string                     `gorm:"-" json:"version"`
+	SaleDiscount         float32                    `gorm:"-" json:"saleDiscount"` // Sale discounts are pulled from the db but included only in API responses not on actual rows in db.
+	ConfigurationOptions []PluginConfig             `gorm:"foreignKey:PluginMetadataID" json:"configurationOptions"`
+	PriceDetails         PluginMetadataPriceDetails `gorm:"foreignKey:PluginMetadataID" json:"priceDetails"`
+	Tier                 int                        `json:"tier"`
+}
+
+type PluginConfig struct {
+	ID               uint     `gorm:"primaryKey" json:"id"`
+	Name             string   `json:"name"`
+	Section          string   `json:"section"`
+	Description      string   `json:"description"`
+	Type             string   `json:"type"`
+	IsBool           bool     `json:"isBool"`
+	Values           string   `gorm:"type:text" json:"-"`
+	ValuesSlice      []string `gorm:"-" json:"values"`
+	PluginMetadataID uint     `json:"pluginMetadataId"`
 }

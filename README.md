@@ -19,13 +19,16 @@ To run and use this tool:
 
 ```shell
 # Build the tool
-go build -o migrate migrate.go
+export GOOS=linux
+export GOARCH=amd64
 
-# Run plugin metadata migration
-./migrate -db-name=kraken -db-user=kraken -db-password=dev_pass -plugin-file=plugins.json
+go build -o migrate main.go
 
-# Run plugin packs migration
-./migrate -db-name=kraken -db-user=kraken -db-host=prod-server.com -db-password=prod_pass
+# Run migration for Dev
+./migrate -db-name=kraken -db-user=kraken -db-password=$DEV_PASSWORD -db-port 3306
+
+# Run migration for Prod
+./migrate -db-name=kraken -db-user=kraken -db-host=$PROD_HOST -db-password=$PROD_PASSWORD -db-port 30306
 
 # Dry run to see what would change
 ./migrate -db-name=kraken -db-user=kraken -dry-run
@@ -71,6 +74,13 @@ No tests yet.
 
 ## Deployment
 
+This is designed to be deployed on a kubernetes cluster through Helm. Docker images are already built for both minio and 
+MySQL so to deploy them to a cluster run:
+
+```shell
+helm install minio ./manifets/minio -f ./manifets/minio/values.yaml
+helm install kraken-db ./manifets/kraken-db -f ./manifets/kraken-db/values.yaml
+```
 
 ## Built With
 
@@ -91,15 +101,12 @@ repository](https://github.com/cbartram/kraken-loader-plugin/tags).
 
 - **C. Bartram** - *Initial Project implementation* - [RuneWraith](https://github.com/cbartram)
 
-See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
-who participated in this project.
+See also the list of [contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)who participated in this project.
 
 ## License
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
-details
+This project is licensed under the [CC0 1.0 Universal](LICENSE.md) Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
+details.
 
 ## Acknowledgments
 
