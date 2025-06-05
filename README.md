@@ -40,6 +40,7 @@ The following sections describe how you can manage and configure Kraken plugins 
 - Plugin Sales
 - Beta plugins
 - Adding plugins
+- Longhorn Block Storage
 
 ## Revoking Plugin Access & Beta Plugins
 
@@ -66,6 +67,17 @@ SET pd.month = 1000,
     pd.three_month = 2700,
     pd.year = 10000
 WHERE pm.name = @plugin_name;
+```
+
+## Longhorn Block Storage
+
+[Longhorn](https://longhorn.io) is used for data redundancy and backups for PVC's within the cluster. To access the longhorn UI
+port forward with: 
+
+```shell
+kubectl -n longhorn-system port-forward service/longhorn-frontend 8080:80
+
+# access via http://localhost:8080 in the web browser
 ```
 
 ## Running the tests

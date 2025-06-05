@@ -15,7 +15,7 @@ service:
 volumes:
   - name: minio-storage
     persistentVolumeClaim:
-      claimName: minio-pvc
+      claimName: minio-pvc-longhorn
 
 volumeMounts:
   - name: minio-storage
