@@ -5808,6 +5808,38 @@
         "type": "boolean",
         "isBool": true,
         "values": []
+      },
+      {
+        "name": "Highlight Melee Tiles",
+        "section": "Misc",
+        "description": "Highlights tiles which are in range of Yama's melee attack.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Phase 3 Donofly",
+        "section": "Misc",
+        "description": "Highlight Yama for a few ticks to let you know it's phase three if you are donoflying.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Outline Safe Glyphs",
+        "section": "Yama",
+        "description": "Draw an outline on the glyphs which null the special attack.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Safe Glyph Tick Counter",
+        "section": "Yama",
+        "description": "Draws a tick counter for how much time you have to navigate to the safe glyph.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
       }
     ],
     "priceDetails": {
