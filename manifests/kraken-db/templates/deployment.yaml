@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{.Values.name}}
+  namespace: {{.Values.namespace}}
   labels:
     app: {{.Values.name}}
 spec:
-  replicas: {{.Values.replicaCount}}
+  replicas: 1
   selector:
     matchLabels:
       app: {{.Values.name}}
@@ -17,12 +18,12 @@ spec:
         app: {{.Values.name}}
     spec:
       containers:
-        - name: main
+        - name: mysql-master
           image: {{.Values.image.repository}}:{{.Values.image.tag}}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
             - containerPort: {{.Values.service.targetPort}}
-              name: {{.Values.name}}
+              name: mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
@@ -44,9 +45,35 @@ spec:
                 secretKeyRef:
                   name: mysql-secrets
                   key: MYSQL_DATABASE
+            - name: MYSQL_REPLICATION_USER
+              value: "replicator"
+            - name: MYSQL_REPLICATION_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: MYSQL_REPLICATION_PASSWORD
           volumeMounts:
-            {{- toYaml .Values.volumeMounts | nindent 12 }}
+            - name: mysql-master-config
+              mountPath: /etc/mysql/conf.d
+            - name: db-storage
+              mountPath: /var/lib/mysql
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          readinessProbe:
+            exec:
+              command:
+                - bash
+                - -c
+                - "mysql -u root -p${MYSQL_ROOT_PASSWORD} -e 'SELECT 1'"
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          livenessProbe:
+            exec:
+              command:
+                - bash
+                - -c
+                - "mysql -u root -p${MYSQL_ROOT_PASSWORD} -e 'SELECT 1'"
+            initialDelaySeconds: 60
+            periodSeconds: 30
       volumes:
         {{- toYaml .Values.volumes | nindent 8 }}

@@ -17,13 +17,16 @@ service:
 
 resources:
   limits:
-    cpu: 256m
-    memory: 1Gi
+    cpu: 500m
+    memory: 2Gi
   requests:
-    cpu: 128m
-    memory: 512Mi
+    cpu: 300m
+    memory: 1Gi
 
 volumes:
+  - name: mysql-master-config
+    configMap:
+      name: mysql-master-config
   - name: db-storage
     persistentVolumeClaim:
       claimName: kraken-db-pvc-longhorn

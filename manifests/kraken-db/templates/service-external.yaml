@@ -16,4 +16,4 @@ spec:
       nodePort: 30306  # Will be accessible on port 30306
       protocol: TCP
   selector:
-    app: kraken-db
+    app: {{.Values.name}}
