@@ -6064,5 +6064,72 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Auto-Scurrius-Prayers",
+    "title": "Auto Scurrius Prayers",
+    "description": "Automatically prays against Scurrius ranged and mage attacks for you!",
+    "imageUrl": "https://kraken-plugins.duckdns.org/auto-scurrius-prayers.png",
+    "videoUrl": "https://youtu.be/somUhR9mWT0",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "On/Off Hotkey Toggle",
+        "section": "Hotkey",
+        "description": "Enables or disables auto prayers.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Show Chat Message",
+        "section": "Hotkey",
+        "description": "Show a message in chat when the plugin is toggled on or off.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Show Overlay",
+        "section": "Hotkey",
+        "description": "Show an on screen overlay if the plugin is enabled/disabled.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Pray",
+        "section": "Prayer",
+        "description": "Automatically pray against Scurrius's attacks.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Prayer Type",
+        "section": "Prayer",
+        "description": "1 tick flick the prayer (saves prayer points) or leave the defensive prayer on.",
+        "type": "Enum",
+        "isBool": false,
+        "values": [
+          "ONE_TICK",
+          "ALWAYS_ON"
+        ]
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000
+    },
+    "tier": 2
   }
 ]
