@@ -6131,5 +6131,85 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Whisperer",
+    "title": "Whisperer",
+    "description": "Helpers, prayer widgets, and highlights for Whisperers auto and special attacks. This plugin makes Whisperer a breeze and is a must have for any Whisperer runner!",
+    "imageUrl": "https://kraken-plugins.duckdns.org/whisperer.png",
+    "videoUrl": "https://youtu.be/byl3NRjrbSo",
+    "topPick": true,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Show Prayer Widget",
+        "section": "Prayer",
+        "description": "Show a widget in the prayer tab telling you what to pray and highlighting the prayer to pray.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Descending Prayer Boxes",
+        "section": "Prayer",
+        "description": "Show a \"guitar hero\" mode of prayers letting you know when to pray.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers",
+        "section": "Prayer",
+        "description": "Automatically prays against the whisperers attacks.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Safe Seeds",
+        "section": "Special Attacks",
+        "description": "Shows the safe seeds which are not corrupted and should be stepped on.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Safe Pillars",
+        "section": "Special Attacks",
+        "description": "Show which pillars are safe and the order which you should stand behind them.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Tentacle Safe Tiles",
+        "section": "Overlays",
+        "description": "Highlight safe tiles from tentacles near your player.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Hide Tentacles Enrage",
+        "section": "Overlays",
+        "description": "Hide the tentacle safe tiles during enrage phase.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000
+    },
+    "tier": 2
   }
 ]
