@@ -17,3 +17,21 @@ data:
     # Performance tuning
     innodb_flush_log_at_trx_commit = 1
     sync_binlog = 1
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kraken-db-sync-config
+  namespace: {{.Values.namespace}}
+data:
+  # Database configuration
+  DB_HOST: "kraken-db.kraken.svc.cluster.local"
+  DB_PORT: "3306"
+  DB_USER: "kraken"
+  DB_NAME: "kraken"
+
+  PLUGIN_FILE: "plugin_metadata.json"
+  PACK_FILE: "plugin_packs.json"
+
+  # Application settings
+  DRY_RUN: "false"

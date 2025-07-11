@@ -20,8 +20,8 @@ func main() {
 		dbUser     = flag.String("db-user", "root", "Database user")
 		dbPassword = flag.String("db-password", "", "Database password")
 		dbName     = flag.String("db-name", "", "Database name")
-		pluginFile = flag.String("plugin-file", "./data/plugin_metadata.json", "Path to plugin metadata JSON file")
-		packFile   = flag.String("pack-file", "./data/plugin_packs.json", "Path to plugin pack JSON file")
+		pluginFile = flag.String("plugin-file", "plugin_metadata.json", "Path to plugin metadata JSON file")
+		packFile   = flag.String("pack-file", "plugin_packs.json", "Path to plugin pack JSON file")
 		dryRun     = flag.Bool("dry-run", false, "Run without making changes")
 	)
 	flag.Parse()
@@ -46,7 +46,6 @@ func main() {
 
 	if *dryRun {
 		sugar.Info("DRY RUN MODE - No changes will be made")
-		// In dry run, you could validate JSON and check what would be changed
 		if *pluginFile != "" {
 			sugar.Infof("Would import plugin metadata from: %s", *pluginFile)
 		}
@@ -56,7 +55,6 @@ func main() {
 		return
 	}
 
-	// Import plugin metadata if file provided
 	if *pluginFile != "" {
 		sugar.Infof("Importing plugin metadata from: %s", *pluginFile)
 		if err := ImportOrUpdatePluginMetadata(*pluginFile, db, sugar); err != nil {
@@ -65,7 +63,6 @@ func main() {
 		sugar.Info("Plugin metadata import completed successfully")
 	}
 
-	// Import plugin packs if file provided
 	if *packFile != "" {
 		sugar.Infof("Importing plugin packs from: %s", *packFile)
 		if err := ImportOrUpdatePluginPacks(*packFile, db, sugar); err != nil {
@@ -373,32 +370,6 @@ type PluginPackPriceDetails struct {
 
 func (p PluginPackPriceDetails) TableName() string {
 	return "plugin_pack_price_details"
-}
-
-type CognitoCredentials struct {
-	ID              uint           `gorm:"primaryKey" json:"id"`
-	UserID          uint           `gorm:"column:user_id;index" json:"userId"`
-	RefreshToken    string         `gorm:"column:refresh_token;type:LONGTEXT" json:"refreshToken,omitempty"`
-	TokenExpiration int32          `gorm:"column:token_expiration" json:"tokenExpirationSeconds,omitempty"`
-	AccessToken     string         `gorm:"column:access_token;type:LONGTEXT" json:"accessToken,omitempty"`
-	IdToken         string         `gorm:"column:id_token;type:LONGTEXT" json:"idToken,omitempty"`
-	CreatedAt       time.Time      `json:"createdAt"`
-	UpdatedAt       time.Time      `json:"updatedAt"`
-	DeletedAt       gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
-}
-
-// HardwareID represents a hardware identifier associated with a user
-type HardwareID struct {
-	ID        uint           `gorm:"primaryKey" json:"id"`
-	Value     string         `gorm:"uniqueIndex;not null"`
-	UserID    uint           `gorm:"column:user_id;index" json:"userId"`
-	CreatedAt time.Time      `json:"createdAt"`
-	UpdatedAt time.Time      `json:"updatedAt"`
-	DeletedAt gorm.DeletedAt `gorm:"index" json:"deletedAt,omitempty"`
-}
-
-func (HardwareID) TableName() string {
-	return "hardware_ids"
 }
 
 type PluginMetadata struct {

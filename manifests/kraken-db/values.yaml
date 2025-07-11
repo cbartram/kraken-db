@@ -9,6 +9,9 @@ image:
   repository: mysql
   pullPolicy: IfNotPresent
   tag: "9.2.0"
+  # The db sync job image
+  syncRepository: cbartram/kraken-db-sync
+  syncTag: "0.0.1"
 
 service:
   type: ClusterIP
