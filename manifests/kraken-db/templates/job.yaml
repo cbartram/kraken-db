@@ -5,11 +5,12 @@ metadata:
   namespace: {{.Values.namespace}}
   labels:
     app: kraken-db-sync
+  annotations:
+    argocd.argoproj.io/sync-options: Force=true,Replace=true
 spec:
   activeDeadlineSeconds: 600
   backoffLimit: 3
   ttlSecondsAfterFinished: 86400
-
   template:
     metadata:
       labels:

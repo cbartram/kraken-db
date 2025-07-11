@@ -57,8 +57,6 @@ jobs:
           command: |
             VERSION_TAG="0.1.$CIRCLE_BUILD_NUM"
             argocd app set kraken-db -p image.syncTag=$VERSION_TAG --grpc-web
-            # Replace required here to ensure the job gets deleted and re-created.
-            kubectl delete jobs --all -n kraken
             argocd app sync kraken-db --grpc-web --prune
       - run:
           name: Deploy Complete
