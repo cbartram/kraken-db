@@ -111,7 +111,7 @@ repository](https://github.com/cbartram/kraken-loader-plugin/tags).
 
 ## Authors
 
-- **C. Bartram** - *Initial Project implementation* - [RuneWraith](https://github.com/cbartram)
+- **C. Bartram** - *Initial Project implementation* - [cbartram](https://github.com/cbartram)
 
 See also the list of [contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)who participated in this project.
 

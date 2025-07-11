@@ -6,12 +6,13 @@ metadata:
   labels:
     app: {{.Values.name}}
 spec:
+  revisionHistoryLimit: 1
   replicas: 1
   selector:
     matchLabels:
       app: {{.Values.name}}
   strategy:
-    type: Recreate
+    type: RollingUpdate
   template:
     metadata:
       labels:
