@@ -5938,7 +5938,7 @@
     "title": "Fight Caves",
     "description": "Displays current and upcoming wave monsters in the Fight Caves and what to pray at TzTok-Jad",
     "imageUrl": "https://kraken-plugins.duckdns.org/fightcaves.png",
-    "videoUrl": "",
+    "videoUrl": "https://youtu.be/bxol8i6kFWo",
     "topPick": false,
     "configurationOptions": [
       {
@@ -6270,5 +6270,136 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Hotkey-Gear-Swap",
+    "title": "Hotkey Gear Swap",
+    "description": "Add hotkeys to instantly swap between different gear sets. Add up to 10 custom gear sets and add delays for human like gear swapping.",
+    "imageUrl": "https://kraken-plugins.duckdns.org/hotkey-gear-swap.png",
+    "videoUrl": "https://youtu.be/unoBIJ_DYwo",
+    "topPick": true,
+    "configurationOptions":[
+      {
+        "name": "License Key",
+        "key": "licenseKey",
+        "section": "License Key",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "secret": true,
+        "values": []
+      },
+      {
+        "name": "Copy Equipment",
+        "key": "copyEquipmentButton",
+        "section": "Copy Equipment",
+        "description": "Copy the ids of your currently equipped items.",
+        "type": "Button",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Delay Type",
+        "key": "delayType",
+        "section": "Delays",
+        "description": "Select the type of delay to use for gear swaps.\nSet Delays: Use the minimum and maximum delays set below.\nInstant: Switch gear instantly without any delay.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["INSTANT", "SET_DELAYS"]
+      },
+      {
+        "name": "Minimum Delay",
+        "key": "minDelay",
+        "section": "Delays",
+        "description": "Adjust the shortest amount of time the plugin can wait between swapping pieces of equipment.\nThis only applies when the delay type is: 'Set Delays'.",
+        "type": "Integer",
+        "units": "Milliseconds",
+        "isBool": false,
+        "min": 10,
+        "max": 500,
+        "values": []
+      },
+      {
+        "name": "Max Delay",
+        "key": "maxDelay",
+        "section": "Delays",
+        "description": "Adjust the longest amount of time the plugin can wait between swapping pieces of equipment.\nThis only applies when the delay type is: 'Set Delays'.",
+        "type": "Integer",
+        "units": "Milliseconds",
+        "isBool": false,
+        "min": 20,
+        "max": 800,
+        "values": []
+      },
+      {
+        "name": "Enable Range Hotkeys",
+        "key": "enableRangeHotkeys",
+        "section": "Range Hotkeys",
+        "description": "Enable range hotkeys.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Range Gear IDs",
+        "key": "rangeGearIds",
+        "section": "Range Hotkeys",
+        "description": "List of Range gear ids to equip. Format: id1, id2, id3",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Range Gear Hotkey",
+        "key": "rangeGearHotkey",
+        "section": "Range Hotkeys",
+        "description": "Set a hotkey for swapping to your range gear.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Enable Custom 10 Hotkeys",
+        "key": "enablecustom10Hotkeys",
+        "section": "Custom 10 Hotkeys",
+        "description": "Enable Custom 10 hotkeys.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "key": "custom10Label",
+        "section": "Custom 10 Hotkeys",
+        "description": "A label for identifying this custom hotkey set.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Custom 10 Gear IDs",
+        "key": "custom10GearIds",
+        "section": "Custom 10 Hotkeys",
+        "description": "List of gear ids to equip. Format: id1, id2, id3",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Custom 10 Gear Hotkey",
+        "key": "custom10GearHotkey",
+        "section": "Custom 10 Hotkeys",
+        "description": "Set a hotkey for swapping to your Custom 10 gear set.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 500,
+      "threeMonth": 1000,
+      "year":  5000
+    },
+    "tier": 3
   }
 ]
