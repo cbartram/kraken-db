@@ -6401,5 +6401,157 @@
       "year":  5000
     },
     "tier": 3
+  },
+
+  {
+    "name": "Doom-of-Mokhaiotl",
+    "title": "Doom of Mokhaiotl",
+    "description": "Overlays, auto prayers, highlights, tick counters and more for the Doom of Mokhaiotl boss. This plugin makes Doom a breeze and is a must have for any Doom runner!",
+    "imageUrl": "https://kraken-plugins.duckdns.org/doom.png",
+    "videoUrl": "https://youtu.be/ys5sAQbopOc",
+    "topPick": true,
+    "configurationOptions":[
+      {
+        "name": "License Key",
+        "key": "licenseKey",
+        "section": "License Key",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Optimal Volatile Earth",
+        "key": "volatileEarth",
+        "section": "Highlights",
+        "description": "Highlight the volatile earth which when shot will be close to your player and path in a straight line.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Slam Ticks Remaining",
+        "key": "chargeOutline",
+        "section": "Highlights",
+        "description": "Shows how many ticks remaining before the slam attack.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Acid Blood",
+        "key": "avidBlood",
+        "section": "Highlights",
+        "description": "Highlight the acid blood on the floor.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Larvae Ticks Remaining",
+        "key": "larvaeTicksRemaining",
+        "section": "Highlights",
+        "description": "Show how many ticks remain until the larvae reaches the boss.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Charge Attack Outline",
+        "key": "chargeOutline",
+        "section": "Highlights",
+        "description": "Draw an outline around the Doom when he is charging.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Highlight Boulder Shards",
+        "key": "boulderShards",
+        "section": "Highlights",
+        "description": "Highlights the tiles where boulder shards will fall.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Highlight Earthen Shield",
+        "key": "earthenShield",
+        "section": "Highlights",
+        "description": "Highlights the safe tiles for the earthen shield.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers",
+        "key": "autoPrayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against the Doom's attacks.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "key": "autoPrayersChatMessage",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "key": "autoPrayerHotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Show Prayer Infobox",
+        "key": "showPrayerInfobox",
+        "section": "Prayer",
+        "description": "Show an infobox telling you what to pray.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Show Prayer Widget",
+        "key": "showPrayerWidget",
+        "section": "Prayer",
+        "description": "Show a widget in the prayer tab telling you what to pray.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Show Tick Timers",
+        "key": "showPrayerTickTimers",
+        "section": "Prayer",
+        "description": "Show tick timers on the widget for when an attack will hit.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Descending Prayer Boxes",
+        "key": "showDescendingBoxes",
+        "section": "Prayer",
+        "description": "Show a \"guitar hero\" mode of prayers letting you know when to pray.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 500,
+      "threeMonth": 1000,
+      "year":  5000
+    },
+    "tier": 3
   }
 ]
