@@ -6553,5 +6553,65 @@
       "year":  5000
     },
     "tier": 3
+  },
+  {
+    "name": "Auto-Hydra-Prayers",
+    "title": "Auto Hydra Prayers",
+    "description": "Automatically prays against the Alchemical Hydra's range and mage auto attacks.",
+    "imageUrl": "https://kraken-plugins.duckdns.org/hydra-prayers.png",
+    "videoUrl": "https://youtu.be/M3VCXVPxI0c",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers",
+        "key": "autoPrayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against the Hydra's attacks.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "key": "autoPrayersChatMessage",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "key": "autoPrayerHotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Show Prayer Infobox",
+        "key": "showPrayerInfobox",
+        "section": "Prayer",
+        "description": "Show an infobox telling you what to pray.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month":  100,
+      "threeMonth":  250,
+      "year":  700
+    },
+    "tier": 1
   }
 ]
