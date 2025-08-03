@@ -97,11 +97,11 @@ func ImportOrUpdatePluginMetadata(jsonFilePath string, db *gorm.DB, log *zap.Sug
 
 		// Check if the plugin already exists by Name (which should be unique)
 		var existingPlugin PluginMetadata
-		log.Debugf("finding plugin: %s", plugin.Name)
+		log.Infof("finding plugin: %s", plugin.Name)
 		result := tx.Where("name = ?", plugin.Name).First(&existingPlugin)
 
 		if result.Error == nil {
-			log.Debugf("plugin already exists: %s", plugin.Name)
+			log.Infof("plugin already exists: %s", plugin.Name)
 			continue
 		}
 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
@@ -340,6 +340,7 @@ type PluginMetadataPriceDetails struct {
 	Month      int  `json:"month"`
 	ThreeMonth int  `json:"threeMonth"`
 	Year       int  `json:"year"`
+	Lifetime   int  `json:"lifetime"`
 
 	// In a JSON serialized response additional metadata about the sale price for a plugin can be included optionally in the response.
 	// If a sale is not happening for a plugin these fields can be safely ignored and will not be returned in the response.
