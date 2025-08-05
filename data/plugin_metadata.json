@@ -6657,7 +6657,7 @@
       {
         "name": "Auto Prayer Type",
         "section": "Prayer",
-        "description": "Defines how auto prayers are executed. Both types will invoke a menu entry on the client thread. Mouse events will also send the appropriate mouse events to the client i.e. mouse hover, mouse click, mouse release. Reflection will not send any mouse events and will invoke the menu entry purely with the Java reflection API. Reflection is generally safer, however, it depends on the client being up to date with RuneLite, while mouse events have no dependencies and can be used right after a RuneLite update.",
+        "description": "Defines how auto prayers are executed within the client. Reflection is safer while mouse events dont require updates.",
         "type": "AutoPrayerType",
         "isBool": false,
         "values": ["MOUSE_EVENTS", "REFLECTION"]
