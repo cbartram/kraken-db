@@ -6402,7 +6402,6 @@
     },
     "tier": 3
   },
-
   {
     "name": "Doom-of-Mokhaiotl",
     "title": "Doom of Mokhaiotl",
@@ -6986,5 +6985,86 @@
       "lifetime": 3700
     },
     "tier": 1
+  },
+  {
+    "name": "Auto-Toa-Prayers",
+    "title": "Auto TOA Prayers",
+    "description": "Automatically prays against Zebak and Wardens (P2/P3/Enrage) for you! You have enough to worry about on the last row, let us handle the prayers!",
+    "imageUrl": "https://kraken-plugins.duckdns.org/auto-toa.png",
+    "videoUrl": "https://youtu.be/NIel_Uip0p0",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against Zebak and Warden attacks.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Prayer API",
+        "section": "Prayer",
+        "description": "Defines how auto prayers are executed. Both types will invoke a menu entry on the client thread. Mouse events will also send the appropriate mouse events to the client i.e. mouse hover, mouse click, mouse release. Reflection will not send any mouse events and will invoke the menu entry purely with the Java reflection API. Reflection is generally safer, however, it depends on the client being up to date with RuneLite, while mouse events have no dependencies and can be used right after a RuneLite update.",
+        "type": "AutoPrayerType",
+        "isBool": false,
+        "values": ["MOUSE_EVENTS", "REFLECTION"]
+      },
+      {
+        "name": "One Tick Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling the auto prayer type (either normal or 1 tick). Note: Pressing the hotkey will toggle the type but it may not reflect in the plugin config panel.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Prayer Type",
+        "section": "Prayer",
+        "description": "1 tick auto prayers or keep prayers on.",
+        "type": "PrayerType",
+        "isBool": false,
+        "values": ["NORMAL", "ONE_TICK"]
+      },
+      {
+        "name": "Auto Prayer Infobox",
+        "section": "Prayer",
+        "description": "Shows an overlay on screen with auto prayer information.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "boolean",
+        "isBool": true,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000,
+      "lifetime": 4000
+    },
+    "tier": 2
   }
 ]
