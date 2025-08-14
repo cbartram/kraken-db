@@ -5,12 +5,13 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"go.uber.org/zap"
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
 	"log"
 	"os"
 	"time"
+
+	"go.uber.org/zap"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 )
 
 func main() {
@@ -395,7 +396,6 @@ type PluginConfig struct {
 	Section          string   `json:"section"`
 	Description      string   `json:"description"`
 	Type             string   `json:"type"`
-	IsBool           bool     `json:"isBool"`
 	Values           string   `gorm:"type:text" json:"-"`
 	ValuesSlice      []string `gorm:"-" json:"values"`
 	PluginMetadataID uint     `json:"pluginMetadataId"`

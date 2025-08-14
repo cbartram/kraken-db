@@ -7066,5 +7066,45 @@
       "lifetime": 4000
     },
     "tier": 2
+  },
+  {
+    "name": "One-Click",
+    "title": "One Click",
+    "description": "A helpful utility plugin which performs 2 actions in 1 click. This makes actions like chiseling dark essence or fletching darts extremely easy!",
+    "imageUrl": "https://kraken-plugins.duckdns.org/one-click.png",
+    "videoUrl": "https://youtu.be/RaqJxTEc3pE",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Show Inventory Ids",
+        "section": "",
+        "description": "Show the ids of each item in your inventory. Helpful for quickly adding custom swaps.",
+        "type": "boolean",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Custom Swaps",
+        "section": "",
+        "description": "Format is as follows: UseThis:WithThis, For example, 6032:13421. This will use saltpetre on compost. Separate new entries with new lines. Lines beginning with # will be ignore and can be used for comments.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month":  100,
+      "threeMonth":  250,
+      "year":  700
+    },
+    "tier": 1
   }
 ]
