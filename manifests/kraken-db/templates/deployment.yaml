@@ -46,13 +46,6 @@ spec:
                 secretKeyRef:
                   name: mysql-secrets
                   key: MYSQL_DATABASE
-            - name: MYSQL_REPLICATION_USER
-              value: "replicator"
-            - name: MYSQL_REPLICATION_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-secrets
-                  key: MYSQL_REPLICATION_PASSWORD
           volumeMounts:
             - name: mysql-master-config
               mountPath: /etc/mysql/conf.d
