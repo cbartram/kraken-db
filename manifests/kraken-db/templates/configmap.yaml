@@ -27,7 +27,7 @@ data:
   # Database configuration
   DB_HOST: "kraken-db.kraken.svc.cluster.local"
   DB_PORT: "3306"
-  DB_USER: "kraken"
+  DB_USER: "root"
   DB_NAME: "kraken"
 
   PLUGIN_FILE: "plugin_metadata.json"
