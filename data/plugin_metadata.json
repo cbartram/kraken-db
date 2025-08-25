@@ -7185,7 +7185,7 @@
         "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
         "type": "Integer",
         "isBool": false,
-        "values": [0, 100]
+        "values": ["0", "100"]
       },
       {
         "name": "Enabled",
@@ -7217,7 +7217,7 @@
         "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
         "type": "Integer",
         "isBool": false,
-        "values": [0, 100]
+        "values": ["0", "100"]
       },
       {
         "name": "Enabled",
@@ -7249,7 +7249,7 @@
         "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
         "type": "Integer",
         "isBool": false,
-        "values": [0, 100]
+        "values": ["0", "100"]
       },
       {
         "name": "Enabled",
@@ -7281,7 +7281,7 @@
         "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
         "type": "Integer",
         "isBool": false,
-        "values": [0, 100]
+        "values": ["0", "100"]
       },
       {
         "name": "Enabled",
@@ -7313,7 +7313,7 @@
         "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
         "type": "Integer",
         "isBool": false,
-        "values": [0, 100]
+        "values": ["0", "100"]
       }
     ],
     "priceDetails": {
