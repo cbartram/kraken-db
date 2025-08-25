@@ -41,7 +41,7 @@ jobs:
             $SUDO curl --insecure -sSL -o /usr/local/bin/argocd $URL
             $SUDO chmod +x /usr/local/bin/argocd
             
-            argocd login argocd-kraken.duckdns.org --insecure --username $ARGOCD_USERNAME --password $ARGOCD_PASSWORD --grpc-web
+             argocd login kraken-plugins.duckdns.org --insecure --username $ARGOCD_USERNAME --password $ARGOCD_PASSWORD --grpc-web --grpc-web-root-path /argocd
       - run:
           name: Build and Push Image
           command: |

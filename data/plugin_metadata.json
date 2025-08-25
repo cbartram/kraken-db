@@ -7106,5 +7106,221 @@
       "year":  700
     },
     "tier": 1
+  },
+  {
+    "name": "Hotkey-Spec",
+    "title": "Hotkey Spec",
+    "description": "Automatically enables your spec with specific hotkeys or when you setup triggers and equip gear.",
+    "imageUrl": "https://kraken-plugins.duckdns.org/auto-spec.png",
+    "videoUrl": "https://youtu.be/gkOBQpSan3s",
+    "topPick": true,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Copy Weapon",
+        "section": "",
+        "description": "Copy the ids of your currently equipped weapons.",
+        "type": "Button",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Click API",
+        "section": "",
+        "description": "Defines how 'clicks' to auto spec are executed. Both types will invoke a menu entry on the client thread. Mouse events <br>will also send the appropriate mouse events to the client i.e. mouse hover, mouse click, mouse release. <br> Reflection will not send any mouse events and will invoke the menu entry purely with the Java reflection API. <br> Reflection is generally safer, however, it depends on the client being up to date with RuneLite, while mouse events <br> have no dependencies and can be used right after a RuneLite update.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["MOUSE_EVENTS", "REFLECTION"]
+      },
+      {
+        "name": "Spec Type",
+        "section": "",
+        "description": "When set to 'Hotkey' the plugin will activate spec when a hotkey is pressed.<br>When set to 'Trigger' the plugin will activate spec when a trigger weapon is equipped.<br>When trigger is selected hotkeys will be ignored and vice versa.<br>Triggers can be set in their respective sections (range, mage, melee, custom 1, etc...). <br>Triggers will activate spec for the first weapon that has a matching trigger item.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["TRIGGER", "HOTKEY"]
+      },
+      {
+        "name": "Auto Spec Hotkey",
+        "section": "",
+        "description": "Set a hotkey for automatically enabling spec.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Enabled",
+        "section": "Preset One",
+        "description": "Enable Preset One's auto spec",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "section": "Preset One",
+        "description": "A label for identifying this custom spec weapon. i.e 'Zaryte Crossbow'",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Preset One Triggers",
+        "section": "Preset One",
+        "description": "The id of the weapon which will trigger the auto spec click.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Spec Threshold",
+        "section": "Preset One",
+        "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [0, 100]
+      },
+      {
+        "name": "Enabled",
+        "section": "Preset Two",
+        "description": "Enable Preset Two's auto spec",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "section": "Preset Two",
+        "description": "A label for identifying this custom spec weapon. i.e 'Zaryte Crossbow'",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Preset Two Triggers",
+        "section": "Preset Two",
+        "description": "The id of the weapon which will trigger the auto spec click.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Spec Threshold",
+        "section": "Preset Two",
+        "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [0, 100]
+      },
+      {
+        "name": "Enabled",
+        "section": "Preset Three",
+        "description": "Enable Preset Three's auto spec",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "section": "Preset Three",
+        "description": "A label for identifying this custom spec weapon. i.e 'Zaryte Crossbow'",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Preset Three Triggers",
+        "section": "Preset Three",
+        "description": "The id of the weapon which will trigger the auto spec click.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Spec Threshold",
+        "section": "Preset Three",
+        "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [0, 100]
+      },
+      {
+        "name": "Enabled",
+        "section": "Preset Four",
+        "description": "Enable Preset Four's auto spec",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "section": "Preset Four",
+        "description": "A label for identifying this custom spec weapon. i.e 'Zaryte Crossbow'",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Preset Four Triggers",
+        "section": "Preset Four",
+        "description": "The id of the weapon which will trigger the auto spec click.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Spec Threshold",
+        "section": "Preset Four",
+        "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [0, 100]
+      },
+      {
+        "name": "Enabled",
+        "section": "Preset Five",
+        "description": "Enable Preset Five's auto spec",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Label",
+        "section": "Preset Five",
+        "description": "A label for identifying this custom spec weapon. i.e 'Zaryte Crossbow'",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Preset Five Triggers",
+        "section": "Preset Five",
+        "description": "The id of the weapon which will trigger the auto spec click.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Spec Threshold",
+        "section": "Preset Five",
+        "description": "Defines the amount of spec energy that needs to be present before a trigger item or hotkey will actually activate the spec. <br>This should be set to the amount of spec necessary to use a specific weapon.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [0, 100]
+      }
+    ],
+    "priceDetails": {
+      "month":  100,
+      "threeMonth":  250,
+      "year":  700
+    },
+    "tier": 1
   }
 ]
