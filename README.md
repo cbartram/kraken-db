@@ -1,6 +1,6 @@
 # Kraken DB
 
-This repository defines the MySQL database and Minio deployment manifests for [Kraken Plugins](https://kraken-plugins.duckdns.org) and 
+This repository defines the MySQL database and Minio deployment manifests for [Kraken Plugins](https://kraken-plugins.com) and 
 also includes scripts required for releasing new plugins, managing beta plugins, and handling plugin sales as they relate to the database.
 
 ## Getting Started
@@ -10,7 +10,7 @@ You will need MySQL installed locally and running (preferably in a docker contai
 ```shell
 DEV_PASSWORD=<pass>
 PROD_PASSWORD=<pass>
-PROD_HOST=<yourhost.duckdns.com>
+PROD_HOST=<yourhost.com>
 ```
 
 ## Running

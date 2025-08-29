@@ -3,7 +3,7 @@
     "name": "Cox-Helper",
     "title": "Chambers Helper",
     "description": "Tracks Olm rotations, specials, tick counters, and various boss helpers for CoX.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/olm.png",
+    "imageUrl": "https://kraken-plugins.com/olm.png",
     "videoUrl": "https://youtu.be/_1HOqzIFwis",
     "topPick": true,
     "configurationOptions": [
@@ -278,7 +278,7 @@
     "name": "Theatre-of-Blood",
     "title": "Theatre of Blood",
     "description": "All in one plugin for Theatre of Blood. Maiden attack ticks, Nylo menu entry swaps, aggressive nylo highlights, bloat timers, Sote prayer and maze overlay, tick eat timers, Verzik crab identifier and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/tob.png",
+    "imageUrl": "https://kraken-plugins.com/tob.png",
     "videoUrl": "https://youtu.be/TegxE8XDqlw",
     "topPick": true,
     "configurationOptions": [
@@ -1135,7 +1135,7 @@
     "name": "Gauntlet-Extended",
     "title": "Gauntlet Extended",
     "description": "Additional helpers for the gauntlet and corrupted gauntlet tracking hunleff prayer and attacks. Resource highlights, demi-boss highlights, resource tracking and more.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/gauntlet.png",
+    "imageUrl": "https://kraken-plugins.com/gauntlet.png",
     "videoUrl": "https://youtu.be/5E79-JNNreQ",
     "topPick": true,
     "configurationOptions": [
@@ -1695,7 +1695,7 @@
     "name": "Zulrah",
     "title": "Zulrah",
     "description": "Tracks Zulrah rotations, snakelings, where to stand, where to move, and what to pray.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/zulrah.png",
+    "imageUrl": "https://kraken-plugins.com/zulrah.png",
     "videoUrl": "https://youtu.be/SrHMu48B7J0",
     "topPick": false,
     "configurationOptions": [
@@ -1967,7 +1967,7 @@
     "name": "Nightmare",
     "title": "Nightmare of Ashihama",
     "description": "All in one plugin for Nightmare and Phosani's Nightmare which tracks prayers, parasites, special attacks, pillar health and more.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/nightmare.png",
+    "imageUrl": "https://kraken-plugins.com/nightmare.png",
     "videoUrl": "https://youtu.be/iTOnTgXE-J8",
     "topPick": false,
     "configurationOptions": [
@@ -2264,7 +2264,7 @@
     "name": "Alchemical-Hydra",
     "title": "Alchemical Hydra",
     "description": "Tracks your prayers, special attacks and when to switch for Hydra including the enrage phase. This plugin has markers for acid, fire and lightning.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/hydra.png",
+    "imageUrl": "https://kraken-plugins.com/hydra.png",
     "videoUrl": "",
     "topPick": true,
     "configurationOptions": [
@@ -2400,7 +2400,7 @@
     "name": "Vorkath",
     "title": "Vorkath",
     "description": "Tracks acid, woox walk paths, and vorkaths special attack count.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/vorkath.png",
+    "imageUrl": "https://kraken-plugins.com/vorkath.png",
     "videoUrl": "https://youtu.be/aYscC21NcUU",
     "topPick": false,
     "configurationOptions": [
@@ -2476,7 +2476,7 @@
     "name": "Cerberus",
     "title": "Cerberus",
     "description": "Tracks ghosts, Cerberus prayer rotations, and more.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/cerberus.png",
+    "imageUrl": "https://kraken-plugins.com/cerberus.png",
     "videoUrl": "",
     "topPick": false,
     "configurationOptions": [
@@ -2620,7 +2620,7 @@
     "name": "Effect-Timers",
     "title": "Effect Timers",
     "description": "Tracks freeze, teleblock, and other timers!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/timers.png",
+    "imageUrl": "https://kraken-plugins.com/timers.png",
     "videoUrl": "",
     "topPick": false,
     "configurationOptions": [
@@ -2756,7 +2756,7 @@
     "name": "ToA-Extended",
     "title": "Tombs of Amascut Extended",
     "description": "A plugin for Tombs of Amascut with extended features like overlays for: prayers, graphics, counters, entity hiding, and boss mechanics.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/toa.png",
+    "imageUrl": "https://kraken-plugins.com/toa.png",
     "videoUrl": "https://youtu.be/4eaVOv5PTS0",
     "topPick": true,
     "configurationOptions": [
@@ -3377,7 +3377,7 @@
     "name": "Inferno",
     "title": "Inferno",
     "description": "Timers, NPC overlays, prayer overlays and more for your Inferno grind!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/inferno.png",
+    "imageUrl": "https://kraken-plugins.com/inferno.png",
     "videoUrl": "",
     "topPick": true,
     "configurationOptions": [
@@ -4038,7 +4038,7 @@
     "name": "Nex",
     "title": "Nex",
     "description": "Timers, Overlays, prayers, counters, cough tracker and more for Nex!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/nex.png",
+    "imageUrl": "https://kraken-plugins.com/nex.png",
     "videoUrl": "https://youtu.be/9Ncmb_tpdbw",
     "topPick": false,
     "configurationOptions": [
@@ -4502,7 +4502,7 @@
     "name": "Grotesque-Guardians",
     "title": "Grotesque Guardians",
     "description": "Timers, Overlays, prayers, counters, and more for the Grotesque Guardians slayer boss!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/gargoyle.png",
+    "imageUrl": "https://kraken-plugins.com/gargoyle.png",
     "videoUrl": "https://youtu.be/HzEKiNWzsIc",
     "topPick": false,
     "configurationOptions": [
@@ -4704,7 +4704,7 @@
     "name": "Zalcano-Extended",
     "title": "Zalcano Extended",
     "description": "Overlays, counters, and advanced pathfinding for Zalcano!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/zalcano.png",
+    "imageUrl": "https://kraken-plugins.com/zalcano.png",
     "videoUrl": "https://youtu.be/2NyJEGb1tE0",
     "topPick": false,
     "configurationOptions": [
@@ -4805,7 +4805,7 @@
     "name": "Smith-Helper",
     "title": "Smithing Helper",
     "description": "potato mode for easy smithing!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/smithing.png",
+    "imageUrl": "https://kraken-plugins.com/smithing.png",
     "videoUrl": "https://youtu.be/5LKx5SLM3os",
     "topPick": false,
     "configurationOptions": [
@@ -4848,7 +4848,7 @@
     "name": "Socket-Sotetseg",
     "title": "Socket Sotetseg",
     "description": "Extended plugin handler for Sotetseg in the Theatre of Blood. This plugin comes pre-packaged with the \"Socket\" plugin as it's required for Maze solving functionality. Create a unique passphrase and share it with your friends in the Socket plugin, then when you enter the Sotetseg maze it will show the solution to anyone in the party!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/sotetseg.png",
+    "imageUrl": "https://kraken-plugins.com/sotetseg.png",
     "videoUrl": "",
     "topPick": false,
     "configurationOptions": [
@@ -5057,7 +5057,7 @@
     "name": "Hueycoatl",
     "title": "Hueycoatl",
     "description": "All in one plugin for Hueycoatl, prayers, tick timers, highlights and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/huey.png",
+    "imageUrl": "https://kraken-plugins.com/huey.png",
     "videoUrl": "https://youtu.be/9vU51i5EY7Q",
     "topPick": true,
     "configurationOptions": [
@@ -5137,7 +5137,7 @@
     "name": "Perilous-Moons",
     "title": "Perilous Moons",
     "description": "All in one plugin for Perilous moons including tick timers, highlights, special attack helpers and more for each boss!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/moons.png",
+    "imageUrl": "https://kraken-plugins.com/moons.png",
     "videoUrl": "https://youtu.be/KmXgp1QbYNg",
     "topPick": false,
     "configurationOptions": [
@@ -5330,7 +5330,7 @@
     "name": "Scurrius",
     "title": "Scurrius",
     "description": "All in one plugin for Scurrius the Rat King. Prayer overlays, highlights, tick timers for rubble and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/scurrius.png",
+    "imageUrl": "https://kraken-plugins.com/scurrius.png",
     "videoUrl": "https://youtu.be/hTFW5yH7A9o",
     "topPick": false,
     "configurationOptions": [
@@ -5442,7 +5442,7 @@
     "name": "Dagannoth-Kings",
     "title": "Dagannoth Kings",
     "description": "All in one plugin for the Dagannoth Kings. Includes highlights, overlays, tick counters, prayers and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/dks.png",
+    "imageUrl": "https://kraken-plugins.com/dks.png",
     "videoUrl": "https://youtu.be/FNR2qd66GUM",
     "topPick": false,
     "configurationOptions": [
@@ -5565,7 +5565,7 @@
     "name": "Vetion",
     "title": "Vetion",
     "description": "All in one plugin for Vetion and Calvarion. Includes highlights, overlays, tick counters and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/vetion.png",
+    "imageUrl": "https://kraken-plugins.com/vetion.png",
     "videoUrl": "https://youtu.be/NEJTNcT658I",
     "topPick": false,
     "configurationOptions": [
@@ -5671,7 +5671,7 @@
     "name": "Tormented-Demons",
     "title": "Tormented Demons",
     "description": "All in one plugin for Tormented demons with a tick counter for the bind and fireball highlights!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/tormenteddemon.png",
+    "imageUrl": "https://kraken-plugins.com/tormenteddemon.png",
     "videoUrl": "https://youtu.be/dRf4Lwte7FU",
     "topPick": false,
     "configurationOptions": [
@@ -5717,7 +5717,7 @@
     "name": "Yama",
     "title": "Yama",
     "description": "All in one plugin for Yama including tick counters, highlights and more! Never struggle with P3 fireballs, judges, or void flares again!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/yama.png",
+    "imageUrl": "https://kraken-plugins.com/yama.png",
     "videoUrl": "https://youtu.be/iraz7wXGmLY",
     "topPick": true,
     "configurationOptions": [
@@ -5853,7 +5853,7 @@
     "name": "Duke-Helper",
     "title": "Duke Helper",
     "description": "All in one plugin for Duke Succellus showing lightning highlights, vent timers, duke attack ticks, extremity ticks and more!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/duke.png",
+    "imageUrl": "https://kraken-plugins.com/duke.png",
     "videoUrl": "https://youtu.be/iNQv5ehOKzw",
     "topPick": false,
     "configurationOptions": [
@@ -5937,7 +5937,7 @@
     "name": "Fight-Caves",
     "title": "Fight Caves",
     "description": "Displays current and upcoming wave monsters in the Fight Caves and what to pray at TzTok-Jad",
-    "imageUrl": "https://kraken-plugins.duckdns.org/fightcaves.png",
+    "imageUrl": "https://kraken-plugins.com/fightcaves.png",
     "videoUrl": "https://youtu.be/bxol8i6kFWo",
     "topPick": false,
     "configurationOptions": [
@@ -6005,7 +6005,7 @@
     "name": "Araxxor",
     "title": "Araxxor",
     "description": "Timers, Overlays and more for swiftly dealing with this spidery slayer boss!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/araxxor.png",
+    "imageUrl": "https://kraken-plugins.com/araxxor.png",
     "videoUrl": "https://youtu.be/X208Nbrxh8E",
     "topPick": false,
     "configurationOptions": [
@@ -6069,7 +6069,7 @@
     "name": "Auto-Scurrius-Prayers",
     "title": "Auto Scurrius Prayers",
     "description": "Automatically prays against Scurrius ranged and mage attacks for you!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/auto-scurrius-prayers.png",
+    "imageUrl": "https://kraken-plugins.com/auto-scurrius-prayers.png",
     "videoUrl": "https://youtu.be/somUhR9mWT0",
     "topPick": false,
     "configurationOptions": [
@@ -6136,7 +6136,7 @@
     "name": "Whisperer",
     "title": "Whisperer",
     "description": "Helpers, prayer widgets, and highlights for Whisperers auto and special attacks. This plugin makes Whisperer a breeze and is a must have for any Whisperer runner!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/whisperer.png",
+    "imageUrl": "https://kraken-plugins.com/whisperer.png",
     "videoUrl": "https://youtu.be/byl3NRjrbSo",
     "topPick": true,
     "configurationOptions": [
@@ -6216,7 +6216,7 @@
     "name": "Auto-Hunllef-Prayers",
     "title": "Auto Hunllef Prayers",
     "description": "Automatically prays against Hunllef ranged and mage attacks for you!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/auto-hunllef-prayers.png",
+    "imageUrl": "https://kraken-plugins.com/auto-hunllef-prayers.png",
     "videoUrl": "https://youtu.be/N6D-lU83tyA",
     "topPick": false,
     "configurationOptions": [
@@ -6275,7 +6275,7 @@
     "name": "Hotkey-Gear-Swap",
     "title": "Hotkey Gear Swap",
     "description": "Add hotkeys to instantly swap between different gear sets. Add up to 10 custom gear sets and add delays for human like gear swapping.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/hotkey-gear-swap.png",
+    "imageUrl": "https://kraken-plugins.com/hotkey-gear-swap.png",
     "videoUrl": "https://youtu.be/unoBIJ_DYwo",
     "topPick": true,
     "configurationOptions":[
@@ -6406,7 +6406,7 @@
     "name": "Doom-of-Mokhaiotl",
     "title": "Doom of Mokhaiotl",
     "description": "Overlays, auto prayers, highlights, tick counters and more for the Doom of Mokhaiotl boss. This plugin makes Doom a breeze and is a must have for any Doom runner!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/doom.png",
+    "imageUrl": "https://kraken-plugins.com/doom.png",
     "videoUrl": "https://youtu.be/ys5sAQbopOc",
     "topPick": true,
     "configurationOptions":[
@@ -6557,7 +6557,7 @@
     "name": "Auto-Hydra-Prayers",
     "title": "Auto Hydra Prayers",
     "description": "Automatically prays against the Alchemical Hydra's range and mage auto attacks.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/hydra-prayers.png",
+    "imageUrl": "https://kraken-plugins.com/hydra-prayers.png",
     "videoUrl": "https://youtu.be/M3VCXVPxI0c",
     "topPick": false,
     "configurationOptions": [
@@ -6617,7 +6617,7 @@
     "name": "God-Wars-Helper",
     "title": "God Wars Helper",
     "description": "Automatically prays against the minion and boss attacks for all 4 GWD bosses. This plugin includes helpful overlays, timers, and tick counters as well for all 4 bosses.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/gwd.png",
+    "imageUrl": "https://kraken-plugins.com/gwd.png",
     "videoUrl": "https://youtu.be/Y9YVyMdwc4M",
     "topPick": false,
     "configurationOptions": [
@@ -6990,7 +6990,7 @@
     "name": "Auto-Toa-Prayers",
     "title": "Auto TOA Prayers",
     "description": "Automatically prays against Zebak and Wardens (P2/P3/Enrage) for you! You have enough to worry about on the last row, let us handle the prayers!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/auto-toa.png",
+    "imageUrl": "https://kraken-plugins.com/auto-toa.png",
     "videoUrl": "https://youtu.be/NIel_Uip0p0",
     "topPick": false,
     "configurationOptions": [
@@ -7071,7 +7071,7 @@
     "name": "One-Click",
     "title": "One Click",
     "description": "A helpful utility plugin which performs 2 actions in 1 click. This makes actions like chiseling dark essence or fletching darts extremely easy!",
-    "imageUrl": "https://kraken-plugins.duckdns.org/one-click.png",
+    "imageUrl": "https://kraken-plugins.com/one-click.png",
     "videoUrl": "https://youtu.be/RaqJxTEc3pE",
     "topPick": false,
     "configurationOptions": [
@@ -7111,7 +7111,7 @@
     "name": "Hotkey-Spec",
     "title": "Hotkey Spec",
     "description": "Automatically enables your spec with specific hotkeys or when you setup triggers and equip gear.",
-    "imageUrl": "https://kraken-plugins.duckdns.org/auto-spec.png",
+    "imageUrl": "https://kraken-plugins.com/auto-spec.png",
     "videoUrl": "https://youtu.be/gkOBQpSan3s",
     "topPick": true,
     "configurationOptions": [
