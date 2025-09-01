@@ -7322,5 +7322,117 @@
       "year":  700
     },
     "tier": 1
+  },
+  {
+    "name": "Auto-Nightmare-Prayers",
+    "title": "Auto Nightmare Prayers",
+    "description": "Automatically prayers against the Nightmare and Phosani's ranged, mage, and melee auto attacks. Supports configurable prayer timings and 1 tick options!",
+    "imageUrl": "https://kraken-plugins.com/auto-nm-prayers.png",
+    "videoUrl": "https://youtu.be/j47DwBCdcPE",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Prayer",
+        "section": "",
+        "description": "Configuration options for prayer overlays",
+        "type": "Section",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against the Nightmare's attacks.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "One Tick Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling the auto prayer type (either normal or 1 tick). Note: Pressing the hotkey will toggle the type but it may not reflect in the plugin config panel.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Prayer Type",
+        "section": "Prayer",
+        "description": "1 tick auto prayers or keep prayers on.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["NORMAL", "ONE_TICK"]
+      },
+      {
+        "name": "Prayer Timing",
+        "section": "Prayer",
+        "description": "Controls when prayers are activated relative to incoming attacks. Changing this will shift the distribution for how early or how late auto prayers will activate. Use 'Perfect Only' to 1 tick every prayer just in time.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["VERY_EARLY", "EARLY","NORMAL", "LATE", "VERY_LATE", "PERFECT", "CUSTOM"]
+      },
+      {
+        "name": "Custom Prayer Timing",
+        "section": "Prayer",
+        "description": "Allows for a custom prayer distribution timing. These should be decimals in the format: very early,early,normal,tick perfect. For example: 0.1,0.4,0.6,1.0 would mean: 10% chance for prayers to activate very early, 40% chance for early, 60% chance for normal, and 100% chance to prayer just in time. Note: Anything less than 1.0 for the 4th parameter means that there is a chance prayers will not activate at all, be warned.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Prayer API",
+        "section": "Prayer",
+        "description": "Defines how auto prayers are executed. Both types will invoke a menu entry on the client thread. Mouse events will also send the appropriate mouse events to the client i.e. mouse hover, mouse click, mouse release. Reflection will not send any mouse events and will invoke the menu entry purely with the Java reflection API. Reflection is generally safer, however, it depends on the client being up to date with RuneLite, while mouse events have no dependencies and can be used right after a RuneLite update.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["MOUSE_EVENTS", "REFLECTION"]
+      },
+      {
+        "name": "Auto Prayer Infobox",
+        "section": "Prayer",
+        "description": "Shows an overlay on screen with auto prayer information.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Incognito Infobox",
+        "section": "Prayer",
+        "description": "Changes the prayer infobox to be 2 small green or red circles representing if the auto prayers are on/off and if they are 1 tick or not. This prevents issues where a screenshot may be taken and shared with 'Auto Prayers' in big text on the screen.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000
+    },
+    "tier": 2
   }
 ]
