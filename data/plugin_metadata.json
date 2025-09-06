@@ -7434,5 +7434,173 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Auto-Pot",
+    "title": "Auto Potion Drinker",
+    "description": "Automatically drinks potions for you! Support combat potions, energy, prayer, range, magic and antipoison/venom.",
+    "imageUrl": "https://kraken-plugins.com/auto-pot.png",
+    "videoUrl": "https://youtu.be/QH0CG9mouRI",
+    "topPick": true,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "On/Off Hotkey",
+        "section": "Hotkey",
+        "description": "Set a hotkey for turning auto pot on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Enable Chat Message",
+        "section": "Hotkey",
+        "description": "Send a message in the chat when auto pot is turned on or off.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Enable Infobox",
+        "section": "Hotkey",
+        "description": "Enable an infobox overlay.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Enable",
+        "section": "AntiPoison / Venom",
+        "description": "Enables drinking anti poison and anti venom potions",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Ticks to Wait",
+        "section": "AntiPoison / Venom",
+        "description": "How manu ticks to wait before drinking a sip of antipoison or anti-venom when poisoned.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Drink When Expiring",
+        "section": "AntiPoison / Venom",
+        "description": "Enables drinking anti poison and anti venom potions before they expire.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Drink When Expired",
+        "section": "AntiPoison / Venom",
+        "description": "Enables drinking anti poison and anti venom potions after they have expired even if you are not poisoned.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Enable",
+        "section": "Combat",
+        "description": "Enables drinking combat related potions",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Skill Trigger",
+        "section": "Combat",
+        "description": "The skill that should be used to determine when to re-pot.",
+        "type": "CombatSkill",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Skill Level",
+        "section": "Combat",
+        "description": "Drink a sip of the associated combat potion when your skill falls at or below this level.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Boost All Melee Stats",
+        "section": "Combat",
+        "description": "When a melee skill (Attack/Strength/Defence) is the trigger, attempt to boost all three melee stats prioritizing potions like super combats",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Enable",
+        "section": "Prayer",
+        "description": "Enables drinking prayer related potions",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Min Prayer",
+        "section": "Prayer",
+        "description": "The minimum your prayer can be before a sip of prayer restoration potion is sipped.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Max Prayer",
+        "section": "Prayer",
+        "description": "The maximum your prayer can be before a sip of prayer restoration potion is sipped.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Skip Redemption",
+        "section": "Prayer",
+        "description": "Does not drink a sip of prayer restoration potion if redemption is active",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Enable",
+        "section": "Energy",
+        "description": "Enables drinking energy related potions",
+        "type": "Boolean",
+        "isBool": true,
+        "values": []
+      },
+      {
+        "name": "Min Energy",
+        "section": "Energy",
+        "description": "The minimum your energy can be before a sip of Energy restoration potion is sipped.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      },
+      {
+        "name": "Max Energy",
+        "section": "Energy",
+        "description": "The maximum your Energy can be before a sip of Energy restoration potion is sipped.",
+        "type": "Integer",
+        "isBool": false,
+        "values": []
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000
+    },
+    "tier": 2
   }
 ]
