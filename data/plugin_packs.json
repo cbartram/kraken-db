@@ -54,5 +54,19 @@
       "threeMonth": 1100,
       "year": 5100
     }
+  },
+  {
+    "name": "Auto-Consume-Pack",
+    "title": "Auto Consume Pack",
+    "description": "Plugins to assist with both eating foods and drinking a large variety of potions!",
+    "imageUrl": "https://kraken-plugins.com/auto-eat.png",
+    "discount": 0,
+    "active": true,
+    "plugins": ["Auto-Eat", "Auto-Pot"],
+    "priceDetails": {
+      "month": 300,
+      "threeMonth": 800,
+      "year": 1300
+    }
   }
 ]

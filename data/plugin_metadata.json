@@ -7602,5 +7602,183 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Auto-Eat",
+    "title": "Auto Eat",
+    "description": "Automatically eats food for you. Supports single eats, wines, combo eats, and triple eats with brews!",
+    "imageUrl": "https://kraken-plugins.com/auto-eat.png",
+    "videoUrl": "https://youtu.be/mQV2z5k35mw",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "secret": true,
+        "position": 0
+      },
+      {
+        "name": "Minimum Delay",
+        "section": "Delays",
+        "description": "Adjust the shortest amount of time the plugin can wait between eating food.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [],
+        "min": 10,
+        "max": 500,
+        "defaultValue": 15,
+        "units": "MILLISECONDS",
+        "position": 1
+      },
+      {
+        "name": "Max Delay",
+        "section": "Delays",
+        "description": "Adjust the longest amount of time the plugin can wait between eating food.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [],
+        "min": 20,
+        "max": 800,
+        "defaultValue": 80,
+        "units": "MILLISECONDS",
+        "position": 2
+      },
+      {
+        "name": "On/Off Hotkey",
+        "section": "Hotkey",
+        "description": "Set a hotkey for turning auto pot on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": [],
+        "defaultValue": "NOT_SET",
+        "position": 0
+      },
+      {
+        "name": "Enable Chat Message",
+        "section": "Hotkey",
+        "description": "Send a message in the chat when auto pot is turned on or off.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": [],
+        "defaultValue": false,
+        "position": 1
+      },
+      {
+        "name": "Enable Infobox",
+        "section": "Hotkey",
+        "description": "Enable an infobox overlay.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": [],
+        "defaultValue": false,
+        "position": 2
+      },
+      {
+        "name": "Threshold One Enabled",
+        "section": "HP Threshold One",
+        "description": "Enables eating at threshold one.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": [],
+        "defaultValue": false,
+        "position": 1
+      },
+      {
+        "name": "Threshold One",
+        "section": "HP Threshold One",
+        "description": "Eats according to the configuration when your HP is at or below this value.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [],
+        "min": 1,
+        "max": 117,
+        "defaultValue": -1,
+        "position": 2
+      },
+      {
+        "name": "Eat Option",
+        "section": "HP Threshold One",
+        "description": "What eat should occur at this threshold? A simple eat, combo eat (shark, karam), or triple eat (brew, shark, karam for example). Combo eats will NOT use brews to combo. Simple eats prioritize hard food but will use brews if available.",
+        "type": "String",
+        "isBool": false,
+        "values": ["SINGLE_EAT", "COMBO_EAT", "TRIPLE_EAT"],
+        "defaultValue": "SINGLE_EAT",
+        "position": 3
+      },
+      {
+        "name": "Threshold Two Enabled",
+        "section": "HP Threshold Two",
+        "description": "Enables eating at threshold Two.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": [],
+        "defaultValue": false,
+        "position": 1
+      },
+      {
+        "name": "Threshold Two",
+        "section": "HP Threshold Two",
+        "description": "Eats according to the configuration when your HP is at or below this value.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [],
+        "min": 1,
+        "max": 117,
+        "defaultValue": -1,
+        "position": 2
+      },
+      {
+        "name": "Eat Option",
+        "section": "HP Threshold Two",
+        "description": "What eat should occur at this threshold? A simple eat, combo eat (shark, karam), or triple eat (brew, shark, karam for example). Combo eats will NOT use brews to combo. Simple eats prioritize hard food but will use brews if available.",
+        "type": "String",
+        "isBool": false,
+        "values": ["SINGLE_EAT", "COMBO_EAT", "TRIPLE_EAT"],
+        "defaultValue": "SINGLE_EAT",
+        "position": 3
+      },
+      {
+        "name": "Threshold Three Enabled",
+        "section": "HP Threshold Three",
+        "description": "Enables eating at threshold Three.",
+        "type": "Boolean",
+        "isBool": true,
+        "values": [],
+        "defaultValue": false,
+        "position": 1
+      },
+      {
+        "name": "Threshold Three",
+        "section": "HP Threshold Three",
+        "description": "Eats according to the configuration when your HP is at or below this value.",
+        "type": "Integer",
+        "isBool": false,
+        "values": [],
+        "min": 1,
+        "max": 117,
+        "defaultValue": -1,
+        "position": 2
+      },
+      {
+        "name": "Eat Option",
+        "section": "HP Threshold Three",
+        "description": "What eat should occur at this threshold? A simple eat, combo eat (shark, karam), or triple eat (brew, shark, karam for example). Combo eats will NOT use brews to combo. Simple eats prioritize hard food but will use brews if available.",
+        "type": "String",
+        "isBool": false,
+        "values": ["SINGLE_EAT", "COMBO_EAT", "TRIPLE_EAT"],
+        "defaultValue": "SINGLE_EAT",
+        "position": 3
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000
+    },
+    "tier": 2
   }
 ]
