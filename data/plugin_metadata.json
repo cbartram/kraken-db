@@ -7780,5 +7780,212 @@
       "year": 1000
     },
     "tier": 2
+  },
+  {
+    "name": "Auto-Yama-Prayers",
+    "title": "Auto Yama Prayers",
+    "description": "Automatically prayers offensively and defensively against Yama. This plugin also has some gear swapping automation for the Judge phases!",
+    "imageUrl": "https://kraken-plugins.com/auto-yama.png",
+    "videoUrl": "https://youtu.be/51Q9vn7Uo1g",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "secret": true,
+        "position": 0
+      },
+      {
+        "name": "Judge Gear Swap",
+        "section": "Gear",
+        "description": "Automatically switch to gear based on the Judge of Yama's current prayers.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 1
+      },
+      {
+        "name": "Copy Equipment",
+        "section": "",
+        "description": "Copy the ids of your currently equipped items.",
+        "type": "Button",
+        "isBool": false,
+        "values": [],
+        "position": 1
+      },
+      {
+        "name": "Melee Gear",
+        "section": "Gear",
+        "description": "Your melee gear ids separated by a comma. Use copy equipment button. i.e 123,456,789",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "position": 3
+      },
+      {
+        "name": "Mage Gear",
+        "section": "Gear",
+        "description": "Your mage gear ids separated by a comma. Use copy equipment button. i.e 123,456,789",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "position": 4
+      },
+      {
+        "name": "Delay Type",
+        "section": "Gear",
+        "description": "Select the type of delay to use for gear swaps. Set Delays: Use the minimum and maximum delays set below. Instant: Switch gear instantly without any delay.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["INSTANT", "SET_DELAYS"],
+        "position": 5
+      },
+      {
+        "name": "Minimum Delay",
+        "section": "Gear",
+        "description": "Adjust the shortest amount of time the plugin can wait between swapping pieces of equipment. This only applies when the delay type is: 'Set Delays'.",
+        "type": "int (ms)",
+        "isBool": false,
+        "values": ["10-500"],
+        "position": 6
+      },
+      {
+        "name": "Max Delay",
+        "section": "Gear",
+        "description": "Adjust the longest amount of time the plugin can wait between swapping pieces of equipment. This only applies when the delay type is: 'Set Delays'.",
+        "type": "int (ms)",
+        "isBool": false,
+        "values": ["20-800"],
+        "position": 7
+      },
+      {
+        "name": "Auto Prayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against Yama's attacks",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 1
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": [],
+        "position": 2
+      },
+      {
+        "name": "One Tick Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling the auto prayer type (either normal or 1 tick). Note: Pressing the hotkey will toggle the type but it may not reflect in the plugin config panel.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": [],
+        "position": 4
+      },
+      {
+        "name": "Prayer Type",
+        "section": "Prayer",
+        "description": "1 tick auto prayers or keep prayers on.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["NORMAL", "ONE_TICK"],
+        "position": 5
+      },
+      {
+        "name": "Prayer Timing",
+        "section": "Prayer",
+        "description": "Controls when prayers are activated relative to incoming attacks. Changing this will shift the distribution for how early or how late auto prayers will activate. Use 'Perfect Only' to 1 tick every prayer just in time.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["VERY_EARLY","EARLY","NORMAL", "LATE", "VERY_LATE", "PERFECT_ONLY", "CUSTOM"],
+        "position": 6
+      },
+      {
+        "name": "Custom Prayer Timing",
+        "section": "Prayer",
+        "description": "Allows for a custom prayer distribution timing. These should be decimals in the format: very early,early,normal,tick perfect.",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "position": 7
+      },
+      {
+        "name": "Target Pray Melee",
+        "section": "Prayer",
+        "description": "When you are Yama's target you will keep protect from melee on. If you are not the target you will only pray melee when in reachable melee distance.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 8
+      },
+      {
+        "name": "Auto Offensive Prayers",
+        "section": "Prayer",
+        "description": "Automatically 1 tick prays your offensive prayer based on your weapons attack speed.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 9
+      },
+      {
+        "name": "Melee Offensive Prayer",
+        "section": "Prayer",
+        "description": "The offensive prayer to pray when using melee. Defaults to Piety.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["PIETY", "CHIVALRY", "ULTIMATE_STRENGTH"],
+        "position": 10
+      },
+      {
+        "name": "Mage Offensive Prayer",
+        "section": "Prayer",
+        "description": "The offensive prayer to pray when using Magic. Defaults to Augury.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["AUGURY", "MYSTIC_MIGHT"],
+        "position": 11
+      },
+      {
+        "name": "Always Offensive P3",
+        "section": "Prayer",
+        "description": "Always pray (don't flick) offensive prayer during P3 Yama. This is useful for Donoflying.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 12
+      },
+      {
+        "name": "Auto Prayer Infobox",
+        "section": "Prayer",
+        "description": "Shows an overlay on screen with auto prayer information.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 13
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 14
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000,
+      "lifetime": 4000
+    },
+    "tier": 2
   }
 ]
