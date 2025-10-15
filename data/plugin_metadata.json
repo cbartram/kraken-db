@@ -7987,5 +7987,103 @@
       "lifetime": 4000
     },
     "tier": 2
+  },
+  {
+    "name": "Auto-Jad-Prayers",
+    "title": "Auto Jad Prayers",
+    "description": "Automatically prayers defensively against Jad and healers. This plugin supports the fight caves jad, inferno jad, triple jad, and the Jad challenges 1-6!",
+    "imageUrl": "https://kraken-plugins.com/auto-jad.png",
+    "videoUrl": "https://youtu.be/YS42nPEU9Rs",
+    "topPick": false,
+    "configurationOptions": [
+      {
+        "name": "License Key",
+        "section": "",
+        "description": "License key required to enable the plugin.",
+        "type": "String",
+        "isBool": false,
+        "values": [],
+        "secret": true,
+        "position": 0
+      },
+      {
+        "name": "Auto Prayers",
+        "section": "Prayer",
+        "description": "Automatically switches defensive prayers to protect against Yama's attacks",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 1
+      },
+      {
+        "name": "Auto Prayer Type",
+        "section": "Prayer",
+        "description": "Defines how auto prayers are executed within the client.",
+        "type": "AutoPrayerType",
+        "isBool": false,
+        "values": ["MOUSE_EVENTS", "REFLECTION"]
+      },
+      {
+        "name": "Melee Prayer Healers",
+        "section": "Prayer",
+        "description": "Automatically pray melee when the healers are in range of your player.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 10
+      },
+      {
+        "name": "Auto Prayers Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling auto prayers on and off.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": [],
+        "position": 2
+      },
+      {
+        "name": "One Tick Hotkey",
+        "section": "Prayer",
+        "description": "Set a hotkey for toggling the auto prayer type (either normal or 1 tick). Note: Pressing the hotkey will toggle the type but it may not reflect in the plugin config panel.",
+        "type": "Keybind",
+        "isBool": false,
+        "values": [],
+        "position": 4
+      },
+      {
+        "name": "Prayer Type",
+        "section": "Prayer",
+        "description": "1 tick auto prayers or keep prayers on.",
+        "type": "Enum",
+        "isBool": false,
+        "values": ["NORMAL", "ONE_TICK"],
+        "position": 5
+      },
+      {
+        "name": "Auto Prayer Infobox",
+        "section": "Prayer",
+        "description": "Shows an overlay on screen with auto prayer information.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 13
+      },
+      {
+        "name": "Auto Prayers Chat Message",
+        "section": "Prayer",
+        "description": "Show a chat message when auto prayers are toggled.",
+        "type": "boolean",
+        "isBool": true,
+        "values": [],
+        "position": 14
+      }
+    ],
+    "priceDetails": {
+      "month": 200,
+      "threeMonth": 500,
+      "year": 1000,
+      "lifetime": 4000
+    },
+    "tier": 2
   }
 ]
